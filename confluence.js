@@ -26,7 +26,7 @@ function dec2hex(s) { return (s < 15.5 ? '0' : '') + Math.round(s).toString(16);
         return str;
     }
 
-    function updateOtp(secret) {
+    function generateOtp(secret) {
 
         var key = base32tohex(secret);
         var epoch = Math.round(new Date().getTime() / 1000.0);
